@@ -5,14 +5,14 @@ import ErrorPage from './pages/ErrorPage';
 import SingleRoomPage from './pages/SingleRoomPage';
 import HomePage from './pages/HomePage';
 import RoomsPage from './pages/RoomsPage';
-/* import NavbarUnit from './components/navbar'; */
+import NavbarUnit from './components/Navbar/NavbarUnit.js';
 
 
 
 function App() {
 	return (
       <div>
-        {/* <NavbarUnit /> */}
+        <NavbarUnit />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/rooms/" component={RoomsPage} />
