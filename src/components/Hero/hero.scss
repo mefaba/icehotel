@@ -1,0 +1,45 @@
+.hero-default {
+	min-height: calc(100vh - 66px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner {
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.5);
+	color: var(--mainWhite);
+	padding: 2rem 1rem;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+}
+
+.banner h1 {
+	font-size: 2.5rem;
+}
+.banner div {
+	width: 10rem;
+	height: 5px;
+	background: var(--primaryColor);
+	margin: 1.7rem auto;
+}
+.banner p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+	.hero-default {
+		margin: 0 !important;
+	}
+	.banner {
+		padding: 2rem 3rem;
+	}
+	.banner h1 {
+		font-size: 3rem;
+	}
+}
