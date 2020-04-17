@@ -3,6 +3,7 @@ import HeroUnit from "./../components/Hero/HeroUnit";
 import HomePageHeroImage from "../images/homepage-min.jpg";
 import { Link } from "react-router-dom";
 import ServicesUnit from "../components/Services/ServicesUnit";
+import FeaturedRoomsUnit from "../components/FeaturedRooms/FeaturedRoomsUnit";
 
 const heroImageStyle = {
 	margin: "40px",
@@ -28,6 +29,7 @@ const HomePage = () => {
 				</div>
 			</HeroUnit>
 			<ServicesUnit />
+			<FeaturedRoomsUnit />
 		</>
 	);
 };

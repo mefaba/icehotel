@@ -8,13 +8,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import RoomProvider from "./context/RoomContext";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<RoomProvider>
+		<RoomProvider >
 			<Router>
 				<App />
 			</Router>
-		</RoomProvider>
-	</React.StrictMode>,
+		</RoomProvider>,
 	document.getElementById("root")
 );
 
