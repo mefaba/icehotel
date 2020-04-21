@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
+/* import Container from "react-bootstrap/Container"; */
 import { IoMdMenu } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
@@ -9,9 +9,9 @@ import "./navbar.scss";
 const NavbarUnit = () => {
 	return (
 		<>
-			<Container>
-				<Navbar className="navbar flex justify-content-center" expand="lg">
-					<Navbar.Brand as={Link} to={"/"}>
+			<div className="navbar-container">
+				<Navbar className="navbar flex justify-content-center" expand="lg" variant="dark">
+					<Navbar.Brand id="icehotel-navbar-brand" as={Link} to={"/"}>
 						ICEHOTEL
 					</Navbar.Brand>
 					<Navbar.Toggle>
@@ -28,7 +28,7 @@ const NavbarUnit = () => {
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
-			</Container>
+			</div>
 		</>
 	);
 };

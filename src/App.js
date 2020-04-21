@@ -6,12 +6,13 @@ import SingleRoomPage from './pages/SingleRoomPage';
 import HomePage from './pages/HomePage';
 import RoomsPage from './pages/RoomsPage';
 import NavbarUnit from './components/Navbar/NavbarUnit.js';
+
 /* import { RoomContext } from './context/RoomContext'; */
 
 function App() {
   /* const value = useContext(RoomContext) */
 	return (
-      <div>
+      <div className="App">
         <NavbarUnit />
         <Switch>
           <Route exact path="/" component={HomePage} />
