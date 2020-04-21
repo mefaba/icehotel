@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import HeroUnit from "../components/Hero/HeroUnit";
 import RoomsPageHeroImage from "../images/roomspage-min.jpg";
 
 import { Link } from "react-router-dom";
+import RoomFilter from "../components/RoomsPageUnit/roomfilter";
+import RoomLister from "../components/RoomsPageUnit/roomlister";
+import { RoomContext } from "../context/RoomContext";
+import LoadingUnit from "../components/Loading/LoadingUnit";
 
 const title = "Our Rooms";
 const subtitle = "";
@@ -15,6 +19,8 @@ const heroImageStyle = {
 	backgroundImage: `url(${RoomsPageHeroImage})`,
 };
 const RoomsPage = () => {
+	const { rooms, sortedRooms, loading } = useContext(RoomContext);
+	/* console.log(rooms) */
 	return (
 		<div>
 			<HeroUnit heroImageStyle={heroImageStyle}>
@@ -27,7 +33,12 @@ const RoomsPage = () => {
 					</Link>
 				</div>
 			</HeroUnit>
-			{/* <room container/> */}
+			{loading ? (<LoadingUnit />) : (
+				<>
+					<RoomFilter rooms={rooms} />
+					<RoomLister sortedRooms={sortedRooms} />
+				</>
+			)}
 		</div>
 	);
 };

@@ -1,0 +1,15 @@
+.filter-container{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+/* .filter-container label {
+    margin: 0;
+} */
+
+.filter-group{
+    margin: 0 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
